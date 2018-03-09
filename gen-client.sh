@@ -94,7 +94,7 @@ addtofile "</tls-auth>"
 
 mkdir -p "$OPENVPNCLIENT_PATH"/${username}
 mv "$OPENVPNCLIENT_PATH"/.tmp/${username}.ovpn "$OPENVPNCLIENT_PATH"/${username}/${username}.ovpn
-cd "$OPENVPNCLIENT_PATH"; tar -jcf ${username}.tar.gz ${username}/
+cd "$OPENVPNCLIENT_PATH"; tar -jcf ${username}.tar.bz2 ${username}/
 echo "Done"
 
 echo "
@@ -105,7 +105,7 @@ echo "
     ---------------------------------------------------------------------------------
                        Download friendly version with:
 
-            'scp root@`hostname -f`:$OPENVPNCLIENT_PATH/${username}.tar.gz .'
+            'scp root@`hostname -f`:$OPENVPNCLIENT_PATH/${username}.tar.bz2 .'
 
 =========================================================================================
 "
